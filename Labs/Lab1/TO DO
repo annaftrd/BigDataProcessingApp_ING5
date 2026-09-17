@@ -1,0 +1,15 @@
+TO DO
+Go through the notebook and follow the instructions in the cells:
+
+Open the book obtained from project guttenberg and:
+count the occurrence of each word
+change all capital letters to lower case
+remove stopwords
+sort the words and their counts in alphabetical order
+sort from most to least frequent word
+remove punctuations
+answer questions about code where applicable
+Look at the given code and try to understand what it does.
+provide line by line code comments
+Write a simple timing function for the exercise in part 1. Change the order of the chained operations to get different timings and try to find the optimal ordering.
+Download the French version of the text from project guttenberg. Write a query to compare the word counts between the two versions.

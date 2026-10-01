@@ -24,7 +24,12 @@ producer = Producer(conf)
 stream = EventStreams(
   streams=['recentchange', 'revision-create'], since='20260209'
 )
-stream.register_filter(server_name='fr.wikipedia.org', type='edit')
+# original filter : 
+# stream.register_filter(server_name='fr.wikipedia.org', type='edit') 
+
+# Step 11: Add a filter to exclude bot edits
+stream.register_filter(server_name='fr.wikipedia.org', type='edit', bot=False)
+
 
 # %% Query EventStream
 # Run a single query and inspect raw and example formatted output
@@ -37,7 +42,7 @@ print(
 )
 
 # %% Streaming Query
-duration = 10 # Streaming window in minutes
+duration = 5 # Streaming window in minutes ; changed from 10 to 5 fortesting purposes
 start_time = datetime.now() # Current clock time
 stop_time = start_time + timedelta(minutes=duration) #start+duration=stop
 

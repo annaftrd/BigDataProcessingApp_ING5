@@ -48,7 +48,7 @@ stop_time = start_time + timedelta(minutes=duration) #start+duration=stop
 
 # Query stream for <duration> minutes
 # Uncomment print change to examine output in interactive env
-topic='wikistreams'
+topic='wikistreams_humans'
 while datetime.now() < stop_time:
   change = next(stream)
   producer.produce(
